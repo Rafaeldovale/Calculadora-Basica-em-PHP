@@ -16,6 +16,9 @@
            <input type="radio" id = "subtrair" value="subtrair" name ="Calc">Subtrair<br>
            <input type="radio" id = "dividir" value="dividir" name= "Calc">Dividir<br>
            <input type="radio" id="multiplicar" value="multiplicar" name= "Calc">Multiplicar<br>
+           <input type="radio" id="multiplicar" value="porcentagem" name= "Calc">Porcento<br>
+           <input type="radio" id="multiplicar" value="porcentagem+" name= "Calc">Porcento +<br>
+           <input type="radio" id="multiplicar" value="porcentagem-" name= "Calc">Porcento -<br>
         </div>
         <button>Calcular</button>
     </form>
@@ -40,6 +43,18 @@
        if($_POST['Calc'] == 'multiplicar'){
         $multiplicar = $n1 * $n2;
         echo $multiplicar;
+       }
+       if($_POST['Calc'] == 'porcentagem'){
+        $porcento = $n1 * ($n2/100);
+        echo $porcento;
+       }
+       if($_POST['Calc'] == 'porcentagem+'){
+        $porcento = ($n1 * ($n2/100)) + $n1;
+        echo $porcento;
+       }
+       if($_POST['Calc'] == 'porcentagem-'){
+        $porcento = $n1 - ($n1 * ($n2/100));
+        echo $porcento;
        }
     ?>
 </body>
